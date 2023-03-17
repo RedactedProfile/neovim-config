@@ -39,3 +39,13 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "80"
+
+
+
+local trwin = vim.api.nvim_get_current_win()
+local trbuf = vim.api.nvim_create_buf(true, true)
+vim.cmd('split')
+local bwin = vim.api.nvim_get_current_win()
+-- vim.cmd('term')
+-- local bbuf = vim.api.nvim_create_buf(true, true)
+vim.api.nvim_win_set_buf(trwin, trbuf)
